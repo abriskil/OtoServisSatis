@@ -1,0 +1,33 @@
+﻿@using SubeApi.Models;
+@model IEnumerable<Sube>
+@{
+    ViewData["Title"] = "Şubeler";
+}
+
+<h1>Şubeler</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model=>model.ad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model=>model.lokason)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.lokason)
+                </td>
+            </tr>   
+        }
+    </tbody>
+</table>
